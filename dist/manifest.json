@@ -1,0 +1,26 @@
+{
+    "name" : "GuruGen AI",
+    "version" : "1.0",
+    "manifest_version" : 3,
+    "action" : {
+        "default_popup" : "index.html",
+        "default_icon" : {
+            "12" : "mini-logo.png",
+            "16" : "mini-logo.png",
+            "24" : "mini-logo.png"
+        }
+    },
+    "permissions" : [
+        "scripting",
+        "activeTab"
+    ],
+    "host_permissions" : [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "icons" : {
+        "12" : "logo.png",
+        "24" : "logo.png",
+        "32" : "logo.png"
+    }
+}
