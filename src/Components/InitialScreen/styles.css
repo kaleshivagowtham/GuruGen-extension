@@ -1,0 +1,57 @@
+.initialScreenWholeCont {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0 2vh;
+    top: 0;
+    background: #FFB581;
+    background-image: url('../../../public/grafika.png');
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-position-y: 130%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideLeft 2s forwards ease-in-out;
+    z-index: 10;
+}
+
+.initialScreenImage {
+    width: 60%;
+    height: auto;
+    margin: 0;
+}
+
+.initialScreenTitleText {
+    width: max-content;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+
+}
+
+.initialScreenText {
+    width: max-content;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    font-weight: 500;
+    color: #000000;
+}
+
+@keyframes slideLeft {
+    0% {
+        right: -6%;
+        display: flex;
+    }
+    35% {
+        right: -6%;
+    }
+    100% {
+        right: 100%;
+        display: none;
+    }
+}

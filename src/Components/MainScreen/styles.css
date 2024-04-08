@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.mainScreenWholeCont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 2.5% 0;
+    background-color: #fff;
+    /* border-radius: 12px; */
+}
+
+.mainScreenNavCont {
+    width: 100%;
+    height: 6vh;
+    gap: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mainScreenNavLogo {
+    height: 100%;
+    width: auto;
+    border-radius: 50%;
+}
+
+.mainScreenNavTitle {
+    width: max-content;
+    height: auto;
+    margin: 0;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: left;
+}
+
+.mainScreenMidCont {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.mainScreenVideoTitle {
+    width: 95%;
+    padding: 0 2.5%;
+    height: 70px;
+    overflow: hidden;
+    margin: 0;
+    text-align: start;
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mainScreenChannelName {
+    width: 95%;
+    height: 20px;
+    margin: 0;
+    padding: 0 2.5%;
+    text-align: start;
+    font-weight: 300;
+    font-size: 13px;
+    color: black;
+    font-family: "Inter", sans-serif;
+}
+
+.mainScreenCardsCont {
+    width: 100%;
+    height: auto;
+    margin-top: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainScreenVisitButton {
+    width: 100%;
+    height: 4vh;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    gap: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mainScreenVisitImg {
+    height: 65%;
+    width: auto;
+}
+
+.mainScreenVisitButton:active {
+    font-size: 12px;
+}
+
+.mainScreenVisitButton:active .mainScreenVisitImg {
+    height: 50%;
+    width: auto;
+}
+
+.switchBotButton {
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    bottom: 0;
+    left: 0vh;
+    border-radius: 50%;
+    z-index: 10;
+    color: #ffffff;
+    background-image: url('../../../public/logo.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.switchBotButtonSavitri {
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    bottom: 0;
+    left: 0vh;
+    border-radius: 50%;
+    z-index: 10;
+    color: #ffffff;
+    background-image: url('../../../public/savitriLogo.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
