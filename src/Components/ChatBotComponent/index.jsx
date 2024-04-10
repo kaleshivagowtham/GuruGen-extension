@@ -4,7 +4,7 @@ import shrinkIcon from '../../../public/shrinkIcon.png';
 import expandIcon from '../../../public/expandIcon.png';
 import miniLogo from '../../../public/mini-logo.png';
 import msgIcon from '../../../public/msgIcon.png';
-// import axios from "axios";
+import axios from "axios";
 import {routes} from '../../utils/routes.js'
 import {client} from '@gradio/client';
 
@@ -51,16 +51,25 @@ export default function ChatBotComponent ({ready, url}) {
 
         console.log("url: ",url)
 
-        const app = await client("https://9dfe72c62938fd3e00.gradio.live/");
-        const result = await app.predict("/predict", [		
-                url, // string  in 'URL' Textbox component		
-                question // string  in 'Question' Textbox component
-        ]);
+        // const app = await client("https://9dfe72c62938fd3e00.gradio.live/");
+        // const result = await app.predict("/predict", [		
+        //         url, // string  in 'URL' Textbox component		
+        //         question // string  in 'Question' Textbox component
+        // ]);
 
+        await axios.post('http://localhost:5000/chat', {
+            url,
+            query : question
+        })
+        .then(resp => {
+            setPrevChat([...prevChat, {question, ans : resp}])
+        })
+        .catch(err => 
+        console.log(err.message));
 
-        console.log("soln: ",result.data);
+        // console.log("soln: ",result.data);
 
-        setPrevChat([...prevChat, {question, ans : result.data}])
+        // setPrevChat([...prevChat, {question, ans : result.data}])
 
         // app = '';
         // result = '';
