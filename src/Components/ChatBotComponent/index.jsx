@@ -62,8 +62,8 @@ export default function ChatBotComponent ({ready, url}) {
             query : question
         })
         .then(resp => {
-            setPrevChat([...prevChat, {question, ans : resp}])
-            console.log(resp);
+            setPrevChat([...prevChat, {question, ans : resp.data}])
+            console.log(resp.data);
         })
         .catch(err => 
         console.log(err.message));
